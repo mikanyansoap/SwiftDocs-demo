@@ -151,13 +151,15 @@ function renderContactInfo() {
             // Make the whole card clickable by moving onclick to the wrapper
             // or wrapping content in an <a> tag
             item.innerHTML = `
-            <div class="contact-content" onclick="window.location.href='${contactInfo.link}'">
+            <a href="${contactInfo.link}" target="_blank">
+            <div class="contact-content" >
                 <button class="contact-btn icon-bubble">
                     <i class="${contactInfo.icon} contact-icon"></i>
                 </button>
                 <p class="text-center">${contactInfo.textLoc}</p>
                 <span class="text-center">${contactInfo.acc}</span>
             </div>
+            </a>
             `;
 
             contactContent.appendChild(item);
@@ -172,5 +174,6 @@ document.addEventListener('DOMContentLoaded', () => {
     renderContactInfo();
 
 });
+
 
 
