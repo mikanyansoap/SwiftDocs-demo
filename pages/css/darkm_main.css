@@ -1,0 +1,198 @@
+    /* ========================
+   DARK MODE OVERRIDES 
+   ======================== */
+
+/* Dark Body & Global Text */
+.dark body {
+    background: #0f172a; /* Tailwind Slate-900 */
+    color: #e2e8f0;      /* Tailwind Slate-200 */
+}
+
+/* Dark Navbar */
+.dark nav {
+    background: #1e293b; /* Tailwind Slate-800 */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    border-bottom: 1px solid #334155;
+}
+
+.dark nav ul li a {
+    color: #e2e8f0;
+}
+
+.dark nav ul li a:hover {
+    color: #7384ff;
+}
+
+
+
+/* Dark About Card */
+.dark .body-bg {
+    /* 1. Set a solid backup color */
+    background-color: #0f172a;
+
+    /* 2. Layer the images: SVG first (Top), Gradient second (Bottom) */
+    background-image: 
+        url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' viewBox='0 0 400 400' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cfilter id='soft-glow' x='-50%25' y='-50%25' width='200%25' height='200%25'%3E%3CfeGaussianBlur in='SourceGraphic' stdDeviation='40' result='blur' /%3E%3C/filter%3E%3ClinearGradient id='light-gradient' x1='100%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='white' stop-opacity='0.3' /%3E%3Cstop offset='60%25' stop-color='white' stop-opacity='0.1' /%3E%3Cstop offset='100%25' stop-color='white' stop-opacity='0' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23light-gradient)' filter='url(%23soft-glow)' /%3E%3C/svg%3E"),
+        linear-gradient(135deg, #1e293b, #0f172a);
+
+    /* 3. Ensure both layers cover the screen and stay fixed */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.dark .about-container-new {
+    background: #1e293b; /* Slate-800 */
+    box-shadow: 0 25px 50px -12px rgba(119, 232, 255, 0.315);
+}
+
+.dark .about-tag {
+    color: #7384ff; /* Lighter blue for contrast */
+}
+/* Dark Headings & Text */
+.dark .about-heading-new {
+    color: #f1f5f9; /* Slate-100 */
+}
+.dark .highlight {
+    background: linear-gradient(to right, #4c6ef5, #7384ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.dark .about-description {
+    color: #cbd5e1; /* Slate-300 */
+}
+
+.dark .text-highlight {
+    color: #7384ff;
+}
+
+.dark .stat-label {
+    color: #94a3b8; /* Slate-400 */
+}
+.dark .stat-num {
+    background: linear-gradient(to right, #a6b3e9, #7384ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+/* Services / Other Sections */
+.dark .services-card {
+    background: #1e293b;
+    color: #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.dark footer {
+    background: #111827; /* Gray-900 */
+    color: #9ca3af;
+    border-top: 1px solid #1f2937;
+}
+.dark .darkmode-icon{
+    color:#e2e8f0;
+}
+.dark .darkmode-icon:hover{
+    color: #7384ff;
+
+}
+
+/* --- Dark Mode Overrides for Services --- */
+.dark .services-item {
+    background: #1e293b; /* Slate-800 */
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+    border: 1px solid #334155;
+}
+
+.dark .services-image {
+    border-bottom: 1px solid #334155;
+}
+
+.dark .services-image img {
+    opacity: 0.9;
+}
+
+.dark .services-title {
+    color: #f8fafc;
+}
+
+.dark .services-description {
+    color: #cbd5e1;
+}
+
+.dark .services-category {
+    color: #60a5fa; /* Lighter blue for dark mode */
+}
+
+.dark .services-h1 {
+    background: linear-gradient(
+    135deg, 
+    #1a6cff , 
+    #5982cc , 
+    #1a6cff 
+);-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dark .whyus-content {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+
+.dark .whyus-content-card {
+    background: #1e293b; /* Slate-800 */
+    border: 1px solid #334155;
+    border-top: 5px solid #73b4ff; /* Lighter blue accent */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.dark .whyus-header {
+    color: #f8fafc;
+}
+
+.dark .whyus-description {
+    color: #cbd5e1;
+}
+
+.dark .icon-bubble {
+    background: #0f172a; /* Slate-900 */
+    color: #73b4ff;
+}
+
+.dark .whyus-content-card:hover .icon-bubble {
+    background: #73b4ff;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(115, 132, 255, 0.4); /* Glow effect */
+}
+
+/* --- Contact Section Dark Mode --- */
+
+.dark .contact-content {
+    background: #1e293b; /* Slate-800 */
+    border: 1px solid #334155;
+    border-top: 5px solid #73b4ff; /* Lighter blue accent */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.dark .contact-h1 {
+    /* Use the same gradient text as Services */
+    background: linear-gradient(135deg, #1a6cff, #5982cc, #1a6cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dark .contact-content p {
+    color: #f8fafc; /* White text */
+}
+
+.dark .contact-btn.icon-bubble {
+    background: #0f172a; /* Darker Slate for icon bg */
+    color: #73b4ff;
+}
+
+.dark .contact-content:hover .contact-btn.icon-bubble {
+    background: #73b4ff;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(115, 132, 255, 0.4); /* Glow effect */
+}
