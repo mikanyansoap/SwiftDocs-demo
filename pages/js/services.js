@@ -50,7 +50,7 @@ const contactInfo = [
         icon: 'fa-solid fa-envelope', // Icon for Email
         textLoc: 'Email:', 
         link: 'mailto:jhenpeduca@swiftdocservices.com',
-        acc: 'jhen.peduca@swiftdocservices.com<br/><a class="none">.</a>'}
+        acc: 'jhen.peduca@swiftdocservices.com'}
     ,  
     {
         icon: 'fa-solid fa-phone', // Icon for Phone
@@ -174,6 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderContactInfo();
 
 });
+
 
 
 
