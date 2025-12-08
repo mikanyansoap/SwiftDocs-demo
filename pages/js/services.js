@@ -1,9 +1,9 @@
 // Services Data
 const services = [
     { 
-        title: 'PAG-IBIG Housing Loan Application Assistance', 
+        title: 'PAG-IBIG Housing Loan Assistance', 
         category: 'Document assistance', 
-        description: 'Assistance with loan applications and requirements.', 
+        description: 'Assistance with loan applications and loan release.', 
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_2RHhmlSVL0aKS7boeubPu_7jdUtIYCGWgA&s' 
     },
     { 
@@ -150,3 +150,4 @@ document.addEventListener('DOMContentLoaded', () => {
     renderContactInfo();
 
 });
+
