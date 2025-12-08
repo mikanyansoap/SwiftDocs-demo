@@ -323,9 +323,8 @@ body {
 
 @media (max-width: 900px) {
     .mini-logo-about {
-        width: 10vw;
-        top: 20px;
-        align-items: center;
+        visibility: none;
+        display: none;
     }
 }
 
@@ -374,6 +373,7 @@ body {
     .about-content-new {
         padding: 30px;
         min-height: 70vh;
+        font-size:1.1rem;
     }
 }
 
@@ -640,6 +640,7 @@ body {
 /* --- Contact Section Styling --- */
 
 #contact {
+    margin-top:50px;
     width: 100vw;
     min-height: 100vh;
     position: relative;
@@ -837,7 +838,7 @@ body {
         /* Hide regular nav, show hamburger */
         .logo_name {
             
-            content: url('./images/logo.png');
+            content: url('./images/swiftdocs_logo.png');
             width: 10px; 
         }
         .logo_container {
@@ -1310,3 +1311,4 @@ footer { text-align: center; padding: 40px 20px; background: #f1f5f9; width: 100
 /* Dark Mode Button */
 
 .darkmode-icon { font-size: 1.2rem; cursor: pointer; color:#0f172a; border: none; background: none; }
+
