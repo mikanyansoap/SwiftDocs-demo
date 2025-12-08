@@ -6,7 +6,6 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
-    overflow-x: hidden;
 }
 
 html, body {
@@ -15,7 +14,6 @@ html, body {
 }
 
 body {
-    /* Gradient Background */
     background: linear-gradient(to bottom, #ffffff, #e0f2fe);
     background-attachment: fixed; /* Parallax effect */
     color: #333;
@@ -45,7 +43,7 @@ body.loading {
     width: 100%;
     height: 100%;
     background: #ffffff;
-    z-index: 99999; /* Topmost layer */
+    z-index: 99999;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,10 +157,8 @@ nav ul li a:hover::after { width: 100%; }
 @media (max-width: 768px) {
     .menu-toggle { display: block; }
     
-    .logo_name { width: 50px; /* Small Mobile Logo */ }
+    .logo_name { width: 50px; /* Mobile Logo Size */ }
     
-    .logo_container { width: auto; }
-
     nav ul.nav-links {
         position: absolute;
         top: 100%;
@@ -387,11 +383,18 @@ nav ul li a:hover::after { width: 100%; }
 
 .services-grid {
     display: grid;
-    /* 260px min-width enables 4 columns on large screens */
+    /* Desktop: 4 Columns (fits ~1200px) */
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
     width: 100%;
     justify-content: center;
+}
+
+/* Force 1 column on mobile */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .services-item {
@@ -402,7 +405,7 @@ nav ul li a:hover::after { width: 100%; }
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     opacity: 0;
     animation: slideUp 0.6s ease-out forwards;
-    height: 100%;
+    height: 100%; /* Ensures equal height */
     display: flex;
     flex-direction: column;
 }
@@ -483,9 +486,17 @@ nav ul li a:hover::after { width: 100%; }
     width: 100%;
     max-width: 1200px;
     display: grid;
+    /* Desktop: 3 Columns */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
     margin-top: 40px;
+}
+
+/* Force 1 column on mobile */
+@media (max-width: 768px) {
+    .whyus-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 .whyus-content-card {
@@ -564,9 +575,23 @@ nav ul li a:hover::after { width: 100%; }
 
 .contact-details {
     display: grid;
+    /* Desktop: 2 Equal Columns */
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 40px;
     width: 100%;
+}
+
+/* Force 1 column on mobile for Contact */
+@media (max-width: 768px) {
+    .contact-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contactinfo-card {
+    width: 100%;
+    /* Ensures card stretches to match height of neighbor */
+    display: flex; 
 }
 
 .contact-content {
@@ -575,10 +600,15 @@ nav ul li a:hover::after { width: 100%; }
     border-radius: 24px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.8);
+    
+    /* Flex settings to center content and equal height */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100%; /* Makes height equal */
+    
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-top: 5px solid #0a42a8;
     cursor: pointer;
@@ -630,4 +660,3 @@ footer {
 @keyframes smoothRotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.05); opacity: 0.8; } 100% { transform: scale(1); opacity: 1; } }
-
