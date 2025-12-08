@@ -50,7 +50,7 @@ const contactInfo = [
         icon: 'fa-solid fa-envelope', // Icon for Email
         textLoc: 'Email:', 
         link: 'mailto:jhenpeduca@swiftdocservices.com',
-        acc: 'jhen.peduca@swiftdocservices.com'}
+        acc: 'jhenpeduca@swiftdocservices.com'}
     ,  
     {
         icon: 'fa-solid fa-phone', // Icon for Phone
@@ -157,7 +157,7 @@ function renderContactInfo() {
                     <i class="${contactInfo.icon} contact-icon"></i>
                 </button>
                 <p class="text-center">${contactInfo.textLoc}</p>
-                <span class="text-center">${contactInfo.acc}</span>
+                <span class="text-center flex-wrap">${contactInfo.acc}</span>
             </div>
             </a>
             `;
@@ -174,6 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderContactInfo();
 
 });
+
 
 
 
