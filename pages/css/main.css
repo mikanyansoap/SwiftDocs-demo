@@ -650,6 +650,7 @@ body {
     position: relative;
     left: 50%;
     margin-left: -50vw;
+    margin-top: 50px;
 }
 
 .contact-h1 {
@@ -1299,3 +1300,4 @@ footer { text-align: center; padding: 40px 20px; background: #f1f5f9; width: 100
 
 /* Dark Mode Button */
 .darkmode-icon { font-size: 1.2rem; cursor: pointer; color:#0f172a; border: none; background: none; }
+
