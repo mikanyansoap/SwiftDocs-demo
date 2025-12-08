@@ -305,10 +305,7 @@ nav ul li a:hover::after { width: 100%; }
 .why-h1 { font-size: 2.5rem; color: #1e293b; font-weight: 800; }
 
 /* =========================================
-   8. CONTACT SECTION (FIXED)
-   ========================================= */
-/* =========================================
-   8. CONTACT SECTION (Flexbox Fix)
+   8. CONTACT SECTION (FIXED WIDTH)
    ========================================= */
 #contact {
     width: 100vw;
@@ -325,7 +322,7 @@ nav ul li a:hover::after { width: 100%; }
 
 .contact-info {
     width: 100%;
-    max-width: 1300px; /* Increased max-width to let 5 cards breathe */
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -335,49 +332,45 @@ nav ul li a:hover::after { width: 100%; }
     font-size: clamp(2rem, 4vw, 2.5rem);
     font-weight: 800;
     margin-bottom: 50px;
+    text-align: center;
     background: linear-gradient(to right, #0a42a8, #1a6cff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-align: center;
 }
 
-/* FLEX CONTAINER (Replaces Grid) */
+/* FLEX CONTAINER: Better than Grid for 2 items */
 .contact-details {
     display: flex;
-    flex-wrap: wrap; /* KEY FIX: Allows cards to drop to next line */
-    justify-content: center; /* Centers the cards nicely */
-    gap: 30px;
+    flex-wrap: wrap; /* Allows stacking on mobile */
+    justify-content: center; /* Centers them in the middle of the screen */
+    gap: 40px;
     width: 100%;
 }
 
-/* CARD WRAPPER */
 .contactinfo-card {
-    /* Grow to fill space, but never shrink below 280px */
-    flex: 1 1 280px; 
-    max-width: 350px; /* Prevents them from getting annoyingly wide */
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    /* KEY FIX: Constrain width so it doesn't get huge */
+    max-width: 400px; 
+    /* Ensures they stack nicely but don't shrink too small */
+    flex: 1 1 300px; 
+    display: flex; 
 }
 
-/* CARD STYLING */
 .contact-content {
     background: #ffffff;
-    width: 100%;
-    padding: 40px 25px;
+    padding: 50px 30px;
     border-radius: 24px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.8);
-    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-top: 5px solid #0a42a8;
+    width: 100%;
     cursor: pointer;
-    height: 100%; /* Ensures equal height */
+    text-align: center;
 }
 
 .contact-content:hover {
@@ -386,10 +379,10 @@ nav ul li a:hover::after { width: 100%; }
 }
 
 .contact-btn.icon-bubble {
-    width: 70px;
-    height: 70px;
-    font-size: 1.8rem;
-    margin: 0 0 15px 0;
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    margin: 0 0 20px 0;
     background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
     color: #0a42a8;
     border-radius: 50%;
@@ -397,7 +390,6 @@ nav ul li a:hover::after { width: 100%; }
     align-items: center;
     justify-content: center;
     border: none;
-    transition: all 0.3s ease;
 }
 
 .contact-content:hover .contact-btn.icon-bubble {
@@ -407,51 +399,28 @@ nav ul li a:hover::after { width: 100%; }
 }
 
 .contact-content p {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: #1e293b;
     margin: 0 0 5px 0;
 }
 
-/* Helper text (Phone numbers/Emails) */
+/* Helper text (Phone/Email) */
 .contact-content span {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #64748b;
-    word-break: break-word; /* Prevents long emails from breaking layout */
+    /* Prevents long emails from breaking layout on small phones */
+    word-break: break-word; 
+    line-height: 1.5;
 }
 
 /* MOBILE FIX */
 @media (max-width: 768px) {
-    #contact {
-        padding: 60px 20px;
-        min-height: auto; /* Allow natural height on mobile */
-    }
-    
-    /* Force stack on mobile */
+    #contact { padding: 40px 20px; }
     .contactinfo-card {
-        flex: 1 1 100%; 
-        max-width: 100%;
+        max-width: 100%; /* Use full width on phones */
     }
 }
-
-.contactinfo-card { width: 100%; display: flex; }
-
-.contact-content {
-    background: #ffffff; padding: 50px 30px; border-radius: 24px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05); border: 1px solid rgba(255, 255, 255, 0.8);
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    transition: transform 0.3s ease; border-top: 5px solid #0a42a8;
-    width: 100%; cursor: pointer;
-}
-.contact-content:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(10, 66, 168, 0.15); }
-
-.contact-btn.icon-bubble {
-    width: 80px; height: 80px; font-size: 2rem; margin: 0 0 20px 0;
-    background: linear-gradient(135deg, #e0f2fe, #f0f9ff); color: #0a42a8;
-    border-radius: 50%; display: flex; align-items: center; justify-content: center; border: none;
-}
-.contact-content:hover .contact-btn.icon-bubble { background: #0a42a8; color: #ffffff; transform: scale(1.1) rotate(10deg); }
-.contact-content p { font-size: 1.25rem; font-weight: 700; color: #1e293b; margin: 0; }
 
 /* =========================================
    9. FOOTER & ANIMATIONS
@@ -468,4 +437,5 @@ footer { text-align: center; padding: 40px 20px; background: #f1f5f9; width: 100
 @keyframes smoothRotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.05); opacity: 0.8; } 100% { transform: scale(1); opacity: 1; } }
+
 
