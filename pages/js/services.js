@@ -48,15 +48,37 @@ const experiences = [
 const contactInfo = [
     {
         icon: 'fa-solid fa-envelope', // Icon for Email
-        textLoc: 'Email Us', 
-        link: 'mailto:jhen.peduca@swiftdocservices.com',
+        textLoc: 'Email:', 
+        link: 'mailto:jhenpeduca@swiftdocservices.com',
         acc: 'jhen.peduca@swiftdocservices.com<br/><a class="none">.</a>'}
     ,  
     {
         icon: 'fa-solid fa-phone', // Icon for Phone
-        textLoc: 'Call Us', 
+        textLoc: 'Mobile No.:', 
         link: 'tel:+639179689038',
-        acc: 'Jhen Peduca<br/>+63 917 968 9038'}
+        acc: 'Jhen Peduca<br/>+63 917 968 9038'
+    },
+    {
+        icon: 'fa fa-whatsapp',
+        textLoc: 'WhatsApp',
+        link: 'wa.me/+639179689038',
+        acc: 'Jhen Peduca<br/>+63 917 968 9038'        
+    },
+    {
+        icon: 'fa fa-telegram',
+        textLoc: 'Telegram',
+        link: 't.me/JhenPeduca',
+        acc: 't.me/JhenPeduca'
+    },
+    {
+        icon: 'fab fa-viber',
+        textLoc: 'Viber',
+        link: 'viber://chat?number=%2B639179689038',
+        acc: 'Jhen Peduca<br/>+63 917 968 9038' 
+    }
+
+    
+    
 ]
 
 // Render Services
@@ -150,4 +172,5 @@ document.addEventListener('DOMContentLoaded', () => {
     renderContactInfo();
 
 });
+
 
