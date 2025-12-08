@@ -640,43 +640,53 @@ body {
 /* --- Contact Section Styling --- */
 
 #contact {
-    /* Center everything and give it breathing room */
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 80px 20px;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    margin-left: -50vw;
+    background-color: transparent;
+}
+
+.contact-info {
+    width: 100%;
+    max-width: 1000px; /* Constrain width so cards don't get too wide */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact-h1 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 4vw, 2.5rem);
     font-weight: 800;
     margin-bottom: 50px;
+    text-align: center;
     background: linear-gradient(to right, #0a42a8, #1a6cff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-align: center;
 }
+
 
 .contact-details {
-    /* Responsive Row Layout */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px; /* Space between the two cards */
+    display: grid;
+    /* Desktop: 2 equal columns 
+       Mobile: Automatically stacks when space is tight (< 320px)
+    */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px; /* Space between cards */
     width: 100%;
-    max-width: 900px;
+    padding: 10px;
 }
 
-/* The Wrapper for animation */
+/* THE CARD WRAPPER */
 .contactinfo-card {
-    flex: 1;
-    min-width: 280px; /* Prevents them from getting too squished */
-    max-width: 400px;
+    width: 100%;
+    display: flex; /* Ensures inner content fills height */
 }
 
 /* The Card Design */
@@ -827,7 +837,7 @@ body {
         /* Hide regular nav, show hamburger */
         .logo_name {
             
-            content: url('/images/logo.png');
+            content: url('./images/logo.png');
             width: 10px; 
         }
         .logo_container {
@@ -1298,4 +1308,5 @@ footer { text-align: center; padding: 40px 20px; background: #f1f5f9; width: 100
 .footer-links { flex-wrap: wrap; gap: 20px; margin-top: 15px; }
 
 /* Dark Mode Button */
+
 .darkmode-icon { font-size: 1.2rem; cursor: pointer; color:#0f172a; border: none; background: none; }
