@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftDocs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="pages/css/main.css">
+    <link rel="stylesheet" href="pages/css/darkm_main.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+</head>
+<body class="body-bg bg-light-ray loading">
+
+    <div id="loader-wrapper">
+        <div class="loader-content">
+            <img src="images/LM_N.png" alt="Loading..." class="loader-logo">
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="logo_container">
+             <a href="javascript:void(0)" onclick="goToSection('.header')">
+             <img src="images/LM_N.png" alt="Logo" class="logo_name" ></a>
+        </div>
+        
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <ul class="nav-links">
+            <li>
+                <a href="javascript:void(0)" onclick="goToSection('#about'); toggleMenu()">About</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" onclick="goToSection('#services'); toggleMenu()">Services</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" onclick="goToSection('#contact'); toggleMenu()">Contact</a>
+            </li>
+            <li>
+                <button type="button" aria-label="Toggle dark mode" class="darkmode-toggle darkmode-icon" onclick="darkmode()">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="container">
+        <section class="header">  
+            <div class="hero">
+                <h1 class="font-bold italic uppercase">We handle the <span class="text-1"> paperwork.</span> <br/> You focus on <span class="text-2">Growth</span></h1>
+                <p class="italic hero-p"> real estate documentation, loan processing, and permit acquisition</p>
+                <a href="#services" class="btn cursor-pointer select-none">View Services</a>
+            </div>
+        </section> 
+
+        <section id="about" class="about-section-new">
+            <div class="about-container-new">
+                <div class="about-visual">
+                    <div class="logo-backdrop"></div>
+                    <img src="images/swiftdocs_logo.png" class="floating-logo" alt="SwiftDocs Logo">
+                </div>  
+                <div class="about-content-new">
+                    <img src="./images/swiftdocs_logo.png" class="mini-logo-about" alt="SwiftDocs Logo">
+                    <div class="about-tag">Since 2023</div>
+                    <h2 class="about-heading-new">Your Partners in <span class="highlight">Seamless Documentation</span></h2>
+                    <p class="about-description">
+                        <strong class="text-highlight">SWIFTDOCS SERVICES &amp; TRADE OPC</strong> is a newly established firm specialized in 
+                        the complex world of real estate documentation, loan processing, and permit acquisition. 
+                    </p>
+                    <p class="about-description">
+                        While our company is a fresh name in the industry, our heartbeat comes from over <strong>two decades</strong> 
+                        of combined expertise. We navigate the maze of government requirements so real estate developers 
+                        and property owners don't have to.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="flex">
+                                <span class="stat-num num-val" num="20">0</span><span class="stat-num">+</span>
+                            </div>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <div class="flex">
+                                <span class="stat-num num-val" num="100">0</span><span class="stat-num">%</span>
+                            </div>
+                            <span class="stat-label">Compliance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section services animate-on-scroll">
+            <div class="services-wrapper animate-on-scroll">
+                <h1 class="services-h1 text-center">Services</h1> 
+                <div class="services-grid-container animate-on-scroll">
+                    <div class="services-grid" id="servicesGrid"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="whyUs" class="section whyus-section animate-on-scroll" >
+             <div class="why-us">
+                <h1 class="services-h1 text-center why-h1">Why us?</h1>
+                <div id="whyUsContent" class="whyus-container animate-on-scroll"></div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="contact-info">
+                 <h1 class="text-center contact-h1">Contact Us</h1>
+                 <div id="contact-details" class="contact-details flex"></div>
+            </div>
+        </section>
+    </section>        
+
+    <footer class="bg-blue-100" id="footer">
+        <p class="m-4">© 2025 SWIFTDOCS</p>
+        <ul class="footer-links list-none flex justify-center gap-6 uppercase text-size-xl">
+            <li><a href="javascript:void(0)" onclick="goToSection('#about')">About</a></li>
+            <li><a href="javascript:void(0)" onclick="goToSection('#services')">Services</a></li>
+            <li><a href="javascript:void(0)" onclick="goToSection('#contact')">Contact</a></li>
+        </ul>
+    </footer>
+
+    <script src="https://unpkg.com/lenis@1.1.4/dist/lenis.min.js"></script>
+    <script src="./pages/js/main.js"></script>
+    <script src="./pages/js/services.js"></script>
+</body>
+</html>
