@@ -223,7 +223,7 @@ nav ul li a:hover::after {
 @media (max-width: 768px) {
     .logo_name {
         content: url('/images/logo.png'); /* Swaps image on mobile */
-        width: 140px; 
+        width: 50px; 
     }
     
     .menu-toggle {
@@ -889,3 +889,4 @@ footer {
     background: #f1f5f9;
     width: 100%;
 }
+
